@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77e0dda1-187b-4ba6-919d-39408e611853" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/As Below/Scripts/DrawWithMouse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/As Below/Scripts/DrawWithMouse.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/DrawTracks.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/DrawTracks.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/SnowTrack.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/SnowTrack.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/snow-ground.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/snow-ground.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/snow-main.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/snow-main.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/splat map.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/splat map.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.As-Below-Game-Jam-3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.As-Below-Game-Jam-3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/As Below/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/As Below/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/SnowTracks.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/SnowTracks.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/As Below/Scripts/DrawWithMouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/As Below/Scripts/DrawWithMouse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/DrawTracks.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/DrawTracks.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/SnowTrack.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/SnowTrack.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636634635415</updated>
       <workItem from="1636634657271" duration="7687000" />
-      <workItem from="1636848716775" duration="7078000" />
+      <workItem from="1636848716775" duration="10259000" />
     </task>
     <servers />
   </component>
