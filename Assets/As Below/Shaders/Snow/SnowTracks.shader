@@ -3,9 +3,11 @@ Shader "Custom/SnowTracks"
     Properties
     {
         _Tess ("Tessellation", Range(1,32)) = 4
-        _Color ("Color", Color) = (1,1,1,1)
-        _Splat ("Splat", 2D) = "white" {}
-        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _SnowColor ("SnowColor", Color) = (1,1,1,1)
+        _SnowTex ("Snow (RGB)", 2D) = "white" {}
+        _GroundTex ("Ground (RGB)", 2D) = "white" {}
+        _GroundColor ("GroundColor", Color) = (1,1,1,1)
+        _Splat ("Splat Map", 2D) = "black" {}
         _Displacement ("Displacement", Range(0, 1.0)) = 0.3
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
@@ -13,14 +15,12 @@ Shader "Custom/SnowTracks"
     SubShader
     {
         Tags
-        {
-            "RenderType"="Opaque"
-        }
+        {"RenderType"="Opaque"}
         LOD 200
 
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard fullforwardshadows vertex:disp tessellate:tessDistance nolightmap
+        #pragma surface surf Standard fullforwardshadows vertex:disp tessellate:tessDistance 
 
         #pragma target 4.6
 
@@ -53,16 +53,20 @@ Shader "Custom/SnowTracks"
             v.vertex.xyz += v.normal * _Displacement;
         }
 
-        sampler2D _MainTex;
+        sampler2D _GroundTex;
+        fixed4 _GroundColor;
+        sampler2D _SnowTex;
+        fixed4 _SnowColor;
 
         struct Input
         {
-            float2 uv_MainTex;
+            float2 uv_GroundTex;
+            float2 uv_SnowTex;
+            float2 uv_Splat;
         };
 
         half _Glossiness;
         half _Metallic;
-        fixed4 _Color;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -74,7 +78,10 @@ Shader "Custom/SnowTracks"
         void surf(Input IN, inout SurfaceOutputStandard o)
         {
             // Albedo comes from a texture tinted by color
-            fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
+            //fixed4 c = tex2D(_GroundTex, IN.uv_MainTex) * _Color;
+            half amount = tex2Dlod(_Splat, float4(IN.uv_Splat, 0, 0)).r;
+            fixed4 c = lerp(tex2D (_SnowTex, IN.uv_SnowTex) * _SnowColor,tex2D(_GroundTex, IN.uv_GroundTex) * _GroundColor, amount);
+            
             o.Albedo = c.rgb;
             // Metallic and smoothness come from slider variables
             o.Metallic = _Metallic;

@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77e0dda1-187b-4ba6-919d-39408e611853" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/As Below/Scripts/DrawWithMouse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/As Below/Scripts/DrawWithMouse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/DrawTracks.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/DrawTracks.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/SnowTrack.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/SnowTrack.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/snow-ground.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/snow-ground.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/snow-main.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/snow-main.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/splat map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/splat map.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.As-Below-Game-Jam-3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.As-Below-Game-Jam-3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/As Below/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/As Below/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/As Below/Shaders/TessellationExample/TessellationExample.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/TessellationExample/TessellationExample.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/SnowTracks.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/As Below/Shaders/Snow/SnowTracks.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,13 +31,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/As Below/Scripts/DrawWithMouse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82ec470c913149358ad0c83ad628910c13a000/ae/32da8574/RenderTexture.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="20m0o4DCgY76VjV6bKhC1g3QJlF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -34,6 +56,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="io.unthrottled.amii.config.ui.PluginSettingsUI" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -67,6 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636634635415</updated>
       <workItem from="1636634657271" duration="7687000" />
+      <workItem from="1636848716775" duration="7078000" />
     </task>
     <servers />
   </component>
@@ -86,8 +110,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
