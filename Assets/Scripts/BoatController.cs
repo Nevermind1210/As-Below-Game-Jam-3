@@ -7,6 +7,7 @@ namespace UnityTemplateProjects
     public class BoatController : MonoBehaviour
     {
         private Rigidbody _rigidbody;
+        private WaterController _waterController;
 
         [SerializeField] private float forwardForce = 10;
         [SerializeField] private float turningTorque = 50;
@@ -14,11 +15,12 @@ namespace UnityTemplateProjects
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
+            _waterController = GetComponent<WaterController>();
         }
 
         private void Update()
         {
-            if (Input.GetKey(KeyCode.W) && !WaterController.current.isGamePaused)
+            if (Input.GetKeyDown(KeyCode.W) && !WaterController.current.isGamePaused)
             {
                 GoForward();
             }
