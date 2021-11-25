@@ -4,34 +4,58 @@ using UnityEngine;
 namespace UnityTemplateProjects
 {
     [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(BoxCollider))]
     public class BoatController : MonoBehaviour
     {
-        private Rigidbody _rigidbody;
-        private WaterController _waterController;
+        [SerializeField] float motorFoamMultiplier;
+        [SerializeField] float motorFoamBase;
+        [SerializeField] float frontFoamMultiplier;
 
-        [SerializeField] private float forwardForce = 10;
-        [SerializeField] private float turningTorque = 50;
+        [SerializeField] float trust;
+        [SerializeField] float turningSpeed;
 
-        private void Start()
+        float Volume;
+        const float pH2O = 1000;
+
+        Rigidbody rb;
+        BoxCollider box;
+        //Water water;
+
+        ParticleSystem.EmissionModule motor, front;
+
+        void Start()
         {
-            _rigidbody = GetComponent<Rigidbody>();
-            _waterController = GetComponent<WaterController>();
+            rb = GetComponent<Rigidbody>();
+            box = GetComponent<BoxCollider>();
+            //water = GameObject.Find("Water").GetComponent<Water>();
+
+            motor = transform.GetChild(0).GetComponent<ParticleSystem>().emission;
+            front = transform.GetChild(1).GetComponent<ParticleSystem>().emission;
         }
 
-        private void Update()
+        void FixedUpdate()
         {
-            if (Input.GetKeyDown(KeyCode.W) && !WaterController.current.isGamePaused)
+            if (Input.GetAxis("Horizontal") < -.4f || Input.GetAxis("Horizontal") > .4f)
             {
-                GoForward();
+                transform.rotation = Quaternion.EulerRotation(0,
+                    transform.rotation.ToEulerAngles().y +
+                    Input.GetAxis("Horizontal") * turningSpeed * Time.fixedDeltaTime, 0);
             }
-        }
 
-        void GoForward()
-        {
-            _rigidbody.AddForce(transform.forward* forwardForce, ForceMode.Acceleration);
+            if (Input.GetAxis("Throttle") > 0.2f)
+            {
+                rb.AddRelativeForce(Vector3.right * trust * Time.fixedDeltaTime * Input.GetAxis("Throttle"));
+            }
 
-            Vector3 torque = new Vector3(0, turningTorque, 0);
-            _rigidbody.AddTorque(torque);
+            motor.rate = motorFoamMultiplier * Input.GetAxis("Throttle") + motorFoamBase;
+            front.rate = frontFoamMultiplier * rb.velocity.magnitude;
+
+            // Volume = box.size.x * box.size.z * (water.WaterLevel(transform.position) - transform.position.y);
+            //
+            // if (Volume > 0)
+            // {
+            //     rb.AddForce(Vector3.up * pH2O * Physics.gravity.magnitude * Volume);
+            // }
         }
     }
 }
